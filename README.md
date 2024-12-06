@@ -36,9 +36,11 @@ export LAVA_BINARY=lavad
 make install
 ```
 
-# Prepare cosmovisor directories
+**Prepare cosmovisor directories**
+```
 mkdir -p $HOME/.lava/cosmovisor/genesis/bin
 ln -s $HOME/.lava/cosmovisor/genesis $HOME/.lava/cosmovisor/current -f
+```
 
 # Copy binary to cosmovisor directory
 cp $(which lavad) $HOME/.lava/cosmovisor/genesis/bin
