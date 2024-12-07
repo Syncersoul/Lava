@@ -42,9 +42,10 @@ mkdir -p $HOME/.lava/cosmovisor/genesis/bin
 ln -s $HOME/.lava/cosmovisor/genesis $HOME/.lava/cosmovisor/current -f
 ```
 
-# Copy binary to cosmovisor directory
+**Copy binary to cosmovisor directory**
+```
 cp $(which lavad) $HOME/.lava/cosmovisor/genesis/bin
-
+```
 # Set node CLI configuration
 lavad config chain-id lava-mainnet-1
 lavad config keyring-backend file
