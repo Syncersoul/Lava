@@ -46,10 +46,12 @@ ln -s $HOME/.lava/cosmovisor/genesis $HOME/.lava/cosmovisor/current -f
 ```
 cp $(which lavad) $HOME/.lava/cosmovisor/genesis/bin
 ```
-# Set node CLI configuration
+**Set node CLI configuration**
+```
 lavad config chain-id lava-mainnet-1
 lavad config keyring-backend file
 lavad config node tcp://localhost:19957
+```
 
 # Initialize the node
 lavad init "Your Node Name" --chain-id lava-mainnet-1
