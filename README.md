@@ -74,13 +74,14 @@ sed -i -e 's|^seeds *=.*|seeds = "e023c3892862744081360a99a2666e8111b196d3@lava-
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.00002ulava"|' $HOME/.lava/config/app.toml
 ```
 
-# Set pruning
+**Set pruning**
+```
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "17"|' \
   $HOME/.lava/config/app.toml
-
+```
 # Enable prometheus
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.lava/config/config.toml
 
