@@ -82,8 +82,10 @@ sed -i \
   -e 's|^pruning-interval *=.*|pruning-interval = "17"|' \
   $HOME/.lava/config/app.toml
 ```
-# Enable prometheus
+**Enable prometheus**
+```
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.lava/config/config.toml
+```
 
 # Change ports
 sed -i -e "s%:1317%:19917%; s%:8080%:19980%; s%:9090%:19990%; s%:9091%:19991%; s%:8545%:19945%; s%:8546%:19946%; s%:6065%:19965%" $HOME/.lava/config/app.toml
